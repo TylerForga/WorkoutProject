@@ -13,25 +13,183 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Application Workout Website</title>
+    <link rel="stylesheet" href="myStyles.css" />
+    <style>
+        #contentWrapper {
+            margin-top: 10%;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+        .calendar {
+            text-align: center;
+        }
+        caption {
+            font-size: 4em;
+        }
+        .calendar th {
+            background-color: black;
+            color: white;
+        }
+        .calendar td{
+            border: 4px solid white;
+            margin: 0;
+        }
+        #previousMonthButton{
+            float: left;
+            margin-top: 5%;
+            margin-left: 10%;
+        }
+        #nextMonthButton{
+            float: right;
+            margin-top: 5%;
+            margin-right: 10%;
+        }
+        #trackerInstructions{
+            width: 25%;          
+            text-align: center;
+        }
+        #trackerInstructions h2{
+            text-decoration: underline;
+        }
+        form{
+            width: 30%;
+        }
+        @media screen and (max-width: 630px){
+            /*Table starts pushing elements in funky way at 630px width. Make table smaller by decreasing table padding
+                and table's title size */
+            caption{
+                font-size: 2em;
+            }
+            td, th{
+                padding: 4px;
+            }
+        }
+        @media screen and (max-width: 492px){
+            /*Table starts pushing elements again at 492px width. Resize smaller again. NavBar overlaps table at this width,
+                so reposition table lower on screen*/
+            caption{
+                font-size: 1.5em;
+            }
+            td, th{
+                padding: 1px;
+            }
+            #contentWrapper{
+                margin-top: 20%;
+            }
+        }
+    </style>
 </head>
 <body>
     <!--Header with name of company and logo-->
-    <header>
-        <h1>Forga's Workout and Micro Tracker</h1>
-        <img src="Images/WorkoutWebsiteLogo.png" alt="Forga's Logo">
+    <header class="websiteHeader">
+        <h1>
+            <img src="Images/WorkoutWebsiteLogo.png" alt="Forga's Logo" >
+            Forga's Workout and Macro Tracker
+            <img src="Images/WorkoutWebsiteLogo.png" alt="Forga's Logo" >
+        </h1>
     </header>
     
     <!--Navigation-->
-    <nav>
-        <a href="index.html">Homepage</a></li>
-        <a href="workouts.html">Workouts</a></li>
-        <a href="tracker.html">Micro & Workout Tracker</a></li>
-        <a href="login.html">Sign In</a></li>
+    <nav class="navigationBar">
+        <ul>
+            <li><a href="index.html">Homepage</a></li>
+            <li><a href="workouts.html">Workouts</a></li>
+            <li><a href="tracker.html">Macro & Workout Tracker</a></li>
+            <li><a href="about.html">About Us</a></li>
+        </ul>
     </nav>
 
+    <!--Create a calendar for a placeholder for an interactive calendar using a html table to adhere
+        to assignment's requirements. Create placeholder for form to allow entries into calendar.(JS)
+        Create placeholder for results(JS).
+        TODO: create calendar days as buttons to allow entries of workouts/macros. Make next/prev buttons functional showing
+        new calendar months-->
+    <div id="contentWrapper">
+        <table class="calendar" cellpadding="15" cellspacing="0">
+            <caption>
+                <button id="previousMonthButton"><</button>
+                February
+                <button id="nextMonthButton">></button>
+            </caption>
+            <thead>
+                <th>Sunday</th>
+                <th>Monday</th>
+                <th>Tuesday</th>
+                <th>Wednesday</th>
+                <th>Thursday</th>
+                <th>Friday</th>
+                <th>Saturday</th>
+            </thead>
+            <tbody>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td>1</td>
+                    <td>2</td>
+                    <td>3</td>
+                    <td>4</td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td>6</td>
+                    <td>7</td>
+                    <td>8</td>
+                    <td>9</td>
+                    <td>10</td>
+                    <td>11</td>
+                </tr>
+                <tr>
+                    <td>12</td>
+                    <td>13</td>
+                    <td>14</td>
+                    <td>15</td>
+                    <td>16</td>
+                    <td>17</td>
+                    <td>18</td>
+                </tr>
+                <tr>
+                    <td>19</td>
+                    <td>20</td>
+                    <td>21</td>
+                    <td>22</td>
+                    <td>23</td>
+                    <td>24</td>
+                    <td>25</td>
+                </tr>
+                <tr>
+                    <td>26</td>
+                    <td>27</td>
+                    <td>28</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </tbody>
+        </table>
+        <section id="trackerInstructions">
+            <h2>Instructions</h2>
+            <p>
+                Click on a day to view workout and macro entries. You can enter in an entry using the form to the right. The entry results
+                will appear at the bottom. You can select to view multiple days or all days at the bottom as well.
+            </p>
+        </section>
+        <form>
+            placeholder for form. Allow entries into calendar using datetimepicker. Allow for calendar day to be marked with a small element
+            or change the day's text color for easy identification of which days have entries. 
+        </form>
+    </div>
+    <div id="entryResults">
+        Placeholder for results. Need a database as well as JS for this to work. TODO: create radiobox for both macros and workouts
+        options to allow users to populate results. Maybe: Add datetimepicker for quick selection of a date to populate both results?
+    </div>
+
     <!--Footer section with copyright-->
-    <footer>
-        Created and maintained by Tyler Forga &copy2023
+    <footer class="websiteFooter">
+        Created and maintained by Tyler Forga &copy;2023
     </footer>
 </body>
 </html>

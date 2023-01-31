@@ -1,0 +1,140 @@
+<!--
+    Author: Tyler Forga 
+    Date: 1/16/2023 
+    Filename: template.html 
+    Login page so you can use the tracker. Otherwise everyone's workouts and micros will be on same tracker. RESEARCH THIS!!!
+-->
+<!--HTML Boilerplate and title-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Application Workout Website</title>
+    <link rel="stylesheet" href="myStyles.css" />
+    <style>
+        textarea{
+            height: 210px;
+            width: 350px;
+            resize: none;
+        }
+        #mainContentWrapper{
+            margin-top: 5%;
+            margin-bottom: 5%;
+            display: block;
+        }
+        #mainContentWrapper h2{
+            font-size: 35px;
+            width: 12%;
+        }
+        #mainContentWrapper p{
+            font-size: 23px;
+            font-family: 'Times New Roman', Times, serif;
+        }
+        .contentAreaLeft{
+            border: 5px dotted white;
+            width: 35%;
+            height: 215px;
+            margin-left: 8%;
+            padding: 5px;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+        }
+        .underlapContentAreaLeft{
+            height: 235px;
+            width: 170px;
+            float: left;
+            background-color: white;
+            margin-left: -20px;
+        }
+        .contentAreaLeft p{
+           margin-left: 12%;
+        }
+        .contentAreaRight{
+            border: 5px dotted white;
+            width: 35%;
+            height: 215px;
+            margin-left: 55%;
+            padding: 5px;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+        }
+        .underlapContentAreaRight{
+            /*TODO: Correct this position with float right without pushing about me content down. Positioning might not work for
+                additional elements */
+            position: absolute;
+            height: 235px;
+            width: 200px;
+            margin-left: 90.35%;
+            background-color: white;
+            /*Getting weird results with hiding overflow horizontally. When moving broswer between different screen resolutions 
+                horizontal scroll bar appears.  */
+            overflow-x: hidden;
+        }
+        .contentAreaRight p{
+           margin-left: 12%;
+        }
+        #submitConcernsButton{
+            height: 25px;
+            margin-left: 27%;
+            margin-top: 15%;
+        }
+    </style>
+</head>
+<body>
+    <!--Header with name of company and logo-->
+    <header class="websiteHeader">
+        <h1>
+            <img src="Images/WorkoutWebsiteLogo.png" alt="Forga's Logo" >
+            Forga's Workout and Macro Tracker
+            <img src="Images/WorkoutWebsiteLogo.png" alt="Forga's Logo" >
+        </h1>
+    </header>
+    
+    <!--Navigation-->
+    <nav class="navigationBar">
+        <ul>
+            <li><a href="index.html">Homepage</a></li>
+            <li><a href="workouts.html">Workouts</a></li>
+            <li><a href="tracker.html">Macro & Workout Tracker</a></li>
+            <li><a href="about.html">About Us</a></li>
+        </ul>
+    </nav>
+
+    <!--Page content area. Make several sections for filler content. Will recreate this page when finish with course project
+        TODO: Add contact info. Add some unique CSS animations. Ideas: stick figure doing exercises, animations to content areas.-->
+    <div id="mainContentWrapper">
+        <section class="underlapContentAreaLeft"><br/></section>
+        <section class="contentAreaLeft">
+            <h2>Why create this website?</h2>
+            <p>
+                I've seen workout apps before, but they never allow for tracking progress with marcos and workouts. With my website 
+                application, it allows exactly that. It provides a centralized location to track workouts and macros while allowing users
+                to lookup different workout exercises.  
+            </p>
+        </section>
+        <section class="underlapContentAreaRight"></section>
+        <section class="contentAreaRight">
+            <h2>About Me</h2>
+            <p>
+                I'm Tyler Forga, an aspiring web developer. I have been interested in bodybuilding for the last few years, which is where
+                I got the idea for a workout website application. I was born and raised in Minnesota until I was 18 years old. 
+            </p>
+        </section>
+        <section class="underlapContentAreaLeft"><br/></section>
+        <section class="contentAreaLeft">
+            <h2>Questions, Comments, Concerns</h2>
+            <button id="submitConcernsButton">Submit</button>
+            <textarea placeholder="Enter text here..." ></textarea>
+        </section>
+    </div>
+
+    <!--Footer section with copyright-->
+    <footer class="websiteFooter">
+        Created and maintained by Tyler Forga &copy;2023
+    </footer>
+</body>
+</html>

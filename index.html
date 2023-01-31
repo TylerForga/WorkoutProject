@@ -12,36 +12,116 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Application Workout Website</title>
+    <link rel="stylesheet" href="myStyles.css" />
+    <style>
+        .homepageAboutContent{
+            background-color: white;
+            margin:auto;
+            margin-top: 10%;
+            padding: 10px;
+            width: 50%;
+        }
+        .homepageAboutContent h2{
+            font-family: 'Times New Roman', Times, serif;
+            text-align: center;
+            text-decoration: underline;
+            margin-top: 0;
+        }
+        .homepageAboutContent p{
+            font-family: 'Courier New', Courier, monospace;
+        }
+        #wrapper{
+            display: flex;
+            width: 100%;
+        }
+        #wrapper img{
+            width: 230px;
+        }
+        .pictureColumnLeft{
+            float: left;
+            border: 5px solid white;
+            width: 230px;
+            flex-direction: column;
+            background-color: white;
+        }
+        .pictureColumnRight{
+            float: right;
+            flex-direction: column;
+            border: 5px solid white;
+            width: 230px;
+            background-color: white;
+        }
+        @media screen and (max-width: 966px){
+            #wrapper{
+                margin-top: 10%;
+            }
+        }
+        @media screen and (max-width:611px){
+            /* 
+               TODO: Fix Responsive design at 500px width. Whitespace pushing down without wrapping columns
+            */
+            #wrapper img{
+                width:150px;
+            }
+            .pictureColumnLeft{
+                width:150px;
+                
+            }
+            .pictureColumnRight{
+                width:150px;
+            }
+        }
+    </style>
 </head>
 <body>
     <!--Header with name of company and logo-->
-    <header>
-        <h1>Forga's Workout and Micro Tracker</h1>
-        <img src="Images/WorkoutWebsiteLogo.png" alt="Forga's Logo">
+    <header class="websiteHeader">
+        <h1>
+            <img src="Images/WorkoutWebsiteLogo.png" alt="Forga's Logo" >
+            Forga's Workout and Macro Tracker
+            <img src="Images/WorkoutWebsiteLogo.png" alt="Forga's Logo" >
+        </h1>
     </header>
     
     <!--Navigation-->
-    <nav>
-        <a href="index.html">Homepage</a>
-        <a href="workouts.html">Workouts</a>
-        <a href="tracker.html">Micro & Workout Tracker</a>
-        <a href="login.html">Sign In</a>
+    <nav class="navigationBar">
+        <ul>
+            <li><a href="index.html">Homepage</a></li>
+            <li><a href="workouts.html">Workouts</a></li>
+            <li><a href="tracker.html">Macro & Workout Tracker</a></li>
+            <li><a href="about.html">About Us</a></li>
+        </ul>
     </nav>
 
-    <!-- About Section of the Company -->
-    <!-- TODO: Fill up homepage content with pictures or additional information? -->
-    <section>
-        <h2>What does this website do?</h2>
-        <p>
-            This website allows you to look up and learn new workouts. You can search workouts by name or by which muscle group you want
-            to workout. The Micro and Workout Tracker allows you to add what you ate daily in order to track your micros. It allows you to
-            add what workouts you did as well as progression pictures. Click on the <b>Workouts</b> or <b>Sign In</b> tab at the top to
-            get started. 
-        </p>
-    </section>
+    <!-- About Section of the Company with picture columns -->
+    <!-- TODO: Add more pictures to an array and use JS to populate randomized list of pictures -->
+    <div id="wrapper">
+        <section class="pictureColumnLeft">
+            <img src="Images/workoutPic1.png" alt="Workout photo">
+            <img src="Images/workoutPic2.png" alt="Workout photo">
+            <img src="Images/workoutPic3.png" height="170px" alt="Workout photo">
+            <img src="Images/workoutPic4.png" alt="Workout photo">
+            <img src="Images/workoutPic5.png" alt="Workout photo">
+        </section>
+
+        <section class="homepageAboutContent">
+            <h2>What does this website do?</h2>
+            <p>
+                This website allows you to look up and learn new workouts. You can search workouts by name or by which muscle group you want
+                to workout. The Macro and Workout Tracker allows you to add what you ate daily in order to track your macros. It allows you to
+                add what workouts you did as well as progression pictures. Click on the <b>Workouts</b> tab at the top to
+                get started. 
+            </p>
+        </section>
+        <section class="pictureColumnRight">
+            <img src="Images/foodPic2.png" alt="Food photo">
+            <img src="Images/foodPic3.png" alt="Food photo">
+            <img src="Images/foodPic4.png" height="135px" alt="Food photo">
+        </section>
+    </div>
 
     <!--Footer section with copyright-->
-    <footer>
+    <footer class="websiteFooter">
         Created and maintained by Tyler Forga &copy;2023
     </footer>
 </body>

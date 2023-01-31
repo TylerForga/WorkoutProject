@@ -1,0 +1,87 @@
+body{
+    background-color: aqua;
+}
+.websiteHeader h1{
+    font-family: 'Times New Roman', Times, serif;
+    text-align: center;
+    font-size: 70px;
+    margin: auto;
+}
+.websiteHeader h1 img{
+    top: 5px;
+    width: 100px;
+    height: 100px;
+}
+.navigationBar ul{
+    list-style-type: none;
+    width: 455px;
+    padding: 0;
+    position: absolute;
+    left:50%;
+    margin-left: -225px;
+}
+.navigationBar li{
+    float: left;
+    display: inline;
+    
+}
+.navigationBar li a{
+    display: block;
+    background-color: white;
+    color: black;
+    text-align: center;
+    border: 1px solid black;
+    padding: 10px;
+    text-decoration: none;
+}
+.navigationBar a:active{
+    color: green;
+}
+.navigationBar a:visited{
+    background-color: lightgrey;
+}
+.navigationBar a:hover{
+    background-color: bisque;
+}
+
+.websiteFooter{
+    position:fixed;
+    width: 300px;
+    bottom: 0px;
+    padding: 10px;
+    left:50%;
+    margin-left: -160px;
+    border: 1px solid black;
+    background-color: white;
+}
+@media screen and (max-width: 716px){
+    /*
+        Website header does funky repositioning at 716px width, make elements smaller at this width
+    */
+    .websiteHeader h1{
+        font-size: 40px;
+    }
+    .websiteHeader h1 img{
+        top: 5px;
+        width: 50px;
+        height: 50px;
+    }
+}
+@media screen and (max-width: 526px){
+    /*
+        Navigation bar goes off screen/isn't centered at 526px width, make elements smaller and reposition to center
+    */
+    .navigationBar li a{
+        text-decoration: none;
+        font-size: 10px;
+    }
+    .navigationBar ul{
+        list-style-type: none;
+        width: 455px;
+        padding: 0;
+        position: absolute;
+        left:50%;
+        margin-left: -150px;
+        
+    }
+}
