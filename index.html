@@ -12,7 +12,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Application Workout Website</title>
-    <link rel="stylesheet" href="myStyles.css" />
+    <link rel="stylesheet" href="myStyles.css" >
     <style>
         .homepageAboutContent{
             background-color: white;
@@ -96,15 +96,25 @@
     <!-- About Section of the Company with picture columns -->
     <!-- TODO: Add more pictures to an array and use JS to populate randomized list of pictures -->
     <div id="wrapper">
-        <section class="pictureColumnLeft">
-            <img src="Images/workoutPic1.png" alt="Workout photo">
-            <img src="Images/workoutPic2.png" alt="Workout photo">
-            <img src="Images/workoutPic3.png" height="170px" alt="Workout photo">
-            <img src="Images/workoutPic4.png" alt="Workout photo">
-            <img src="Images/workoutPic5.png" alt="Workout photo">
-        </section>
+        <div class="pictureColumnLeft">
+            <a href="Images/workoutPic1.png">
+                <img src="Images/workoutPic1.png" alt="Workout photo">
+            </a>
+            <a href="Images/workoutPic2.png">
+                <img src="Images/workoutPic2.png" alt="Workout photo">
+            </a>
+            <a href="Images/workoutPic3.png">
+                <img src="Images/workoutPic3.png" height="170" alt="Workout photo">
+            </a>
+            <a href="Images/workoutPic4.png">
+                <img src="Images/workoutPic4.png" alt="Workout photo">
+            </a>
+            <a href="Images/workoutPic5.png">
+                <img src="Images/workoutPic5.png" alt="Workout photo">
+            </a>
+        </div>
 
-        <section class="homepageAboutContent">
+        <div class="homepageAboutContent">
             <h2>What does this website do?</h2>
             <p>
                 This website allows you to look up and learn new workouts. You can search workouts by name or by which muscle group you want
@@ -112,12 +122,18 @@
                 add what workouts you did as well as progression pictures. Click on the <b>Workouts</b> tab at the top to
                 get started. 
             </p>
-        </section>
-        <section class="pictureColumnRight">
-            <img src="Images/foodPic2.png" alt="Food photo">
-            <img src="Images/foodPic3.png" alt="Food photo">
-            <img src="Images/foodPic4.png" height="135px" alt="Food photo">
-        </section>
+        </div>
+        <div class="pictureColumnRight">
+            <a href="Images/foodPic2.png">
+                <img src="Images/foodPic2.png" alt="Food photo">
+            </a>
+            <a href="Images/foodPic3.png">
+                <img src="Images/foodPic3.png" alt="Food photo">
+            </a>
+            <a href="Images/foodPic4.png">
+                <img src="Images/foodPic4.png" height="135" alt="Food photo">
+            </a>
+        </div>
     </div>
 
     <!--Footer section with copyright-->

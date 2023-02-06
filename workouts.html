@@ -13,11 +13,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Application Workout Website</title>
-    <link rel="stylesheet" href="myStyles.css" />
+    <link rel="stylesheet" href="myStyles.css" >
     <style>
         #workoutsWrapper {
             margin-top: 5%;
-            float: auto;
             display: flex;
             flex-direction: row;
             justify-content: center;
@@ -28,11 +27,23 @@
         .workoutCard h2, h3 {
             text-align: center;
         }
+        .workoutCard p {
+            height: 144px;
+        }
 
         .workoutCard {
             width: 40%;
             border: 5px solid white;
             padding: 8px;
+        }
+        iframe{          
+            width: 50%;
+            height: 35%;
+        }
+        .videoWrapper{
+            
+            margin-left: 32.5%;
+            margin-top: 5%;
         }
     </style>
 
@@ -64,6 +75,7 @@
         <section class="workoutCard">
             <h2>Exercise: Bench Press</h2>
             <h3>Muscle Group Worked: Upper Body</h3>
+            <p>
                 Instructions:
                 Lie on your back on a flat bench. Grip a barbell with hands slightly wider than shoulder width. The bar should be directly over the shoulders.
                 Press your feet firmly into the ground and keep your hips on the bench throughout the entire movement.
@@ -72,6 +84,11 @@
                 Stop lowering when your elbows are just below the bench. Press feet into the floor as you push the bar back up to return to starting position.
                 Perform 5 to 10 reps, depending on weight used. Perform up to 3 sets.
             </p>
+            <div class="videoWrapper">
+                <iframe 
+                    src="https://www.youtube.com/embed/gRVjAtPip0Y"></iframe>
+                </iframe>
+            </div>
         </section>
         <section class="workoutCard">
             <h2>Exercise: Back Squat </h2>
@@ -86,6 +103,11 @@
                 straight and the chest up, squatting down so the hips are below the knees. From the bottom of 
                 the squat, press feet into the ground and push hips forward to return to the top of the standing position.
             </p>
+            <div class="videoWrapper">
+                <iframe 
+                    src="https://www.youtube.com/embed/Dy28eq2PjcM"></iframe>
+                </iframe>
+            </div>
         </section>
         <section class="workoutCard">
             <h2>Exercise: Lat Pulldown</h2>
@@ -98,6 +120,11 @@
                 From the bottom position, with the bar close to your chin, slowly return the bar to the starting position while controlling its gradual ascent. Don't let it crash into the weight plates.
                 Continue until you complete eight to 12 repetitions in a set. Rest, then continue to complete your program of sets.
             </p>
+            <div class="videoWrapper">
+                <iframe 
+                    src="https://www.youtube.com/embed/an1BMInTXLk"></iframe>
+                </iframe>
+            </div>
         </section>
         <section class="workoutCard">
             <h2>Exercise: Bicep Curl</h2>
@@ -110,8 +137,12 @@
                 Slowly lower the weights, keeping a slight bend in the elbows at the bottom (e.g., don't lock the joints and try to keep tension on the muscle)
                 Repeat for 1-3 sets of 8-15 reps.
             </p>
+            <div class="videoWrapper">
+                <iframe 
+                    src="https://www.youtube.com/embed/Zjv0tiMjkJU"></iframe>
+                </iframe>
+            </div>
         </section>
-
     </div>
 
     <!--Footer section with copyright-->

@@ -1,7 +1,7 @@
 <!--
     Author: Tyler Forga 
     Date: 1/16/2023 
-    Filename: template.html 
+    Filename: about.html 
     Login page so you can use the tracker. Otherwise everyone's workouts and micros will be on same tracker. RESEARCH THIS!!!
 -->
 <!--HTML Boilerplate and title-->
@@ -12,8 +12,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Application Workout Website</title>
-    <link rel="stylesheet" href="myStyles.css" />
-    <style>
+    <link rel="stylesheet" href="myStyles.css" >
+    <style> 
         textarea{
             height: 210px;
             width: 350px;
@@ -82,6 +82,9 @@
             margin-left: 27%;
             margin-top: 15%;
         }
+        #audioPlayerWrapper{
+            margin-left: 55%;
+        }
     </style>
 </head>
 <body>
@@ -107,7 +110,7 @@
     <!--Page content area. Make several sections for filler content. Will recreate this page when finish with course project
         TODO: Add contact info. Add some unique CSS animations. Ideas: stick figure doing exercises, animations to content areas.-->
     <div id="mainContentWrapper">
-        <section class="underlapContentAreaLeft"><br/></section>
+        <div class="underlapContentAreaLeft"><br></div>
         <section class="contentAreaLeft">
             <h2>Why create this website?</h2>
             <p>
@@ -116,21 +119,32 @@
                 to lookup different workout exercises.  
             </p>
         </section>
-        <section class="underlapContentAreaRight"></section>
+        <div class="underlapContentAreaRight"><br></div>
         <section class="contentAreaRight">
             <h2>About Me</h2>
             <p>
                 I'm Tyler Forga, an aspiring web developer. I have been interested in bodybuilding for the last few years, which is where
-                I got the idea for a workout website application. I was born and raised in Minnesota until I was 18 years old. 
+                I got the idea for a workout website application. I was born and raised in Minnesota.
             </p>
         </section>
-        <section class="underlapContentAreaLeft"><br/></section>
+        <div class="underlapContentAreaLeft"><br></div>
         <section class="contentAreaLeft">
             <h2>Questions, Comments, Concerns</h2>
             <button id="submitConcernsButton">Submit</button>
             <textarea placeholder="Enter text here..." ></textarea>
         </section>
-    </div>
+        <div class="underlapContentAreaRight"><br></div>
+        <section class="contentAreaRight">
+            <h2>Need Motivation?</h2>
+            <!--Need JS in order to create buttons for audio player. Couldn't find an audio file to use for this.
+                Once created, format and position the player just like other content areas.-->
+            <div data-video="Vrj2V4wEvWI" data-autoplay="0" data-loop="0" id="youtube-audio" >Click me to hear audio (JS needed
+                to create controls so this is a placeholder)
+            </div>
+            <script src="https://www.youtube.com/iframe_api"></script>
+            <script src="https://cdn.rawgit.com/labnol/files/master/yt.js"></script>
+            </div>
+        </section>
 
     <!--Footer section with copyright-->
     <footer class="websiteFooter">

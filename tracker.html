@@ -1,7 +1,7 @@
 <!--
     Author: Tyler Forga 
     Date: 1/16/2023 
-    Filename: template.html 
+    Filename: tracker.html 
     Create a calendar where you can add workouts and micros or calories to each day and select viewing options for viewing them. Add
         option to upload pictures for progression.
 -->
@@ -13,7 +13,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Application Workout Website</title>
-    <link rel="stylesheet" href="myStyles.css" />
+    <link rel="stylesheet" href="myStyles.css" >
     <style>
         #contentWrapper {
             margin-top: 10%;
@@ -24,6 +24,7 @@
         }
         .calendar {
             text-align: center;
+            border-spacing:0px;
         }
         caption {
             font-size: 4em;
@@ -35,6 +36,10 @@
         .calendar td{
             border: 4px solid white;
             margin: 0;
+        }
+        .calendar th, td{
+            padding: 15px;
+            
         }
         #previousMonthButton{
             float: left;
@@ -107,9 +112,9 @@
         TODO: create calendar days as buttons to allow entries of workouts/macros. Make next/prev buttons functional showing
         new calendar months-->
     <div id="contentWrapper">
-        <table class="calendar" cellpadding="15" cellspacing="0">
+        <table class="calendar" >
             <caption>
-                <button id="previousMonthButton"><</button>
+                <button id="previousMonthButton">&lt;</button>
                 February
                 <button id="nextMonthButton">></button>
             </caption>
