@@ -61,6 +61,13 @@
         form{
             width: 30%;
         }
+        .formRow{
+            font-size: 20px;
+            margin: 5px;
+        }
+        textarea{
+            resize: vertical;
+        }
         @media screen and (max-width: 630px){
             /*Table starts pushing elements in funky way at 630px width. Make table smaller by decreasing table padding
                 and table's title size */
@@ -178,13 +185,56 @@
         <section id="trackerInstructions">
             <h2>Instructions</h2>
             <p>
-                Click on a day to view workout and macro entries. You can enter in an entry using the form to the right. The entry results
+                Click on a day to view workout and macro entries. You can enter in an entry using the form to the right. The calendar entries 
                 will appear at the bottom. You can select to view multiple days or all days at the bottom as well.
             </p>
         </section>
-        <form>
-            placeholder for form. Allow entries into calendar using datetimepicker. Allow for calendar day to be marked with a small element
-            or change the day's text color for easy identification of which days have entries. 
+        <!--Create calendar entry form-->
+        <form action="response_page.php" method="post">
+            <fieldset id="calendarEntryInfo">
+                <legend>Calendar Tracker Entry</legend>
+                <div class="formRow">
+                    <label for="calendarDate">Date of entry:</label>
+                    <input type="datetime-local" id="calendarDate" name="calendarDate">
+                </div>
+                
+                <!--Create option box for type of entry-->
+                <div class="formRow">
+                    <label for="entryType">What type of entry?</label>
+                    <select name="entryType" id="entryType">
+                        <option value="workout">Workout</option>
+                        <option value="macro">Macros</option>
+                    </select>
+                </div>
+                
+                <!--Create text box for user to enter title of entry-->
+                <div class="formRow">
+                    <label for="entryTitle">Enter the title of entry:</label>
+                    <input type="text" id="entryTitle" name="entryTitle" placeholder="Ex. Back Workout or Chicken and Rice Meal" size="35">
+                </div>
+                
+                <!--Create textarea for user to enter description of entry-->
+                <div class="formRow">
+                    <label for="entryDescription">Enter a description of the entry:</label><br>
+                    <textarea name="description" id="entryDescription" rows="6" cols="65"></textarea>
+                </div>
+                
+                <!--Create radioboxes for recommending to a friend-->
+                <div class="formRow">
+                    <label>Would you recommend this entry to a friend?</label>
+                    <input name="entryRecommend" id="yesRecommend" value="yes" type="radio">
+                    <label for="yesRecommend">Yes</label>
+                    <input name="entryRecommend" id="noRecommend" value="no" type="radio">
+                    <label for="noRecommend">No</label>
+                </div>
+                
+                <!--Create submit button-->
+                <div class="formRow">
+                    <input value="Submit" type="submit">
+                </div>
+                
+            </fieldset>
+            Allow for calendar day to be marked with a small element or change the day's text color for easy identification of which days have entries. 
         </form>
     </div>
     <div id="entryResults">
